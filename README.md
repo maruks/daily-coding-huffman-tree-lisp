@@ -28,4 +28,4 @@
 
 ### Test
 
-    sbcl --non-interactive --eval "(ql:quickload :huffman)" --eval "(asdf:test-system :huffman)"
+    ccl -e "(ql:quickload :huffman)" -e "(asdf:test-system :huffman)" -e "(quit)"
