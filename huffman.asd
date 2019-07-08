@@ -1,11 +1,4 @@
-;;;; -*- Mode: Lisp; Syntax: ANSI-Common-Lisp; Base: 10 -*-
-
-(defpackage #:huffman-asd
-  (:use :cl :asdf))
-
-(in-package :huffman-asd)
-
-(asdf:defsystem "huffman"
+(defsystem "huffman"
   :name "huffman"
   :version "0.0.1"
   :author "Maris Orbidans"
@@ -17,11 +10,11 @@
 		:components ((:file "huffman"))))
   :in-order-to ((test-op (test-op "huffman/tests"))))
 
-(asdf:defsystem "huffman/tests"
+(defsystem "huffman/tests"
   :licence "Public Domain"
   :depends-on (:huffman
 	       :fiasco)
   :serial t
   :components ((:module "tests"
 		:components ((:file "huffman-tests"))))
-  :perform (test-op (o c) (uiop:symbol-call 'fiasco 'all-tests)))
+  :perform (test-op (o c) (symbol-call 'fiasco 'all-tests)))

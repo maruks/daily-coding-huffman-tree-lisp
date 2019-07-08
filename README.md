@@ -28,4 +28,4 @@
 
 ### Test
 
-    ccl -e "(ql:quickload :huffman)" -e "(asdf:test-system :huffman)" -e "(quit)"
+    ccl -e "(ql:quickload :huffman/tests)" -e "(asdf:test-system :huffman)" -e "(quit)"
